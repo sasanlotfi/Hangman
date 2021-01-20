@@ -103,3 +103,4 @@ while(guess>0 and value!='0'):
     if(guess==0):
         print("\nYou ran out of guesses. The word was",word+".")
 
+Note="this is the sentence test."
