@@ -106,3 +106,4 @@ while(guess>0 and value!='0'):
 
 Note="this is the sentence test."
 
+Note2="this is another test for pull request"
