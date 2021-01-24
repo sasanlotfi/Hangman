@@ -1,6 +1,30 @@
 import random
 import sys
+import turtle
 difficulty=0
+
+###### THE CODE FOR TURTLE PORTION######
+def top_line():
+    turtle.penup()
+    turtle.pensize(10)
+    turtle.goto(20,0)
+    turtle.setheading(180)
+    turtle.pendown()
+    turtle.forward(40)
+
+def turn_right():
+    turtle.penup()
+    turtle.right(90)
+    turtle.pendown()
+    turtle.forward(50)
+
+
+
+
+
+
+
+
 ########Menu#######
 print("Welcome to Hangman game!")
 print("In this game, a random word will be picked and its letters will be hidden to you. You have to find the word by guessing its letters.")
@@ -16,7 +40,7 @@ if(difficulty==0):
     sys.exit()#exits the program
 
 
-
+top_line()
 #Creating a list that contains the words of the game.
 name_list=[["ball","east","west","time","book","school","bird","bread","meat","boy","ear","back","car","orange","red"],["room","beautiful","hello","bus","yellow","engineering","sign","carpet","kick","telephone","thunder","fail"],["outstanding","wow","howdy","zoo","tesla","texas","victory","youth","ifeluwa","nevada","trump","new","omg","lol"]]
 
@@ -37,7 +61,6 @@ print("\nNumber of guesses remained:", guess)
 for i in dashed_word:
     print(i, end=" ")
 print()
-
 ####The main loop of the game that keeps iterating until one of the conditions get wrong or a break command is executed
 while(guess>0 and value!='0'):
     value=input("Guess a letter:")
@@ -90,6 +113,7 @@ while(guess>0 and value!='0'):
         print("\nThe letters guessed so far:",guessed_letters)
         print("Number of guesses remained:", guess)
     else:#If the guessed letter is not in the word, do the following
+        turn_right()
         print()
         for i in dashed_word:
             print(i, end=" ")
