@@ -19,7 +19,11 @@ def turn_right():
     turtle.forward(50)
 
 
-
+def turn_left():
+    turtle.penup()
+    turtle.left(90)
+    turtle.pendown()
+    turtle.forward(50)
 
 
 
